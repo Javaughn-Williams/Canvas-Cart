@@ -131,9 +131,11 @@ body
 }
 
 
-.banner {
+.banner
+{
     position: relative;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
     width: min-content;
     align-self: center;
@@ -141,6 +143,13 @@ body
     border-width: 5px;
     border-color: black;
 }
+
+
+.banner2
+{
+    visibility: hidden;
+}
+
 
 /* Overlay tint */
 .banner::before {
@@ -171,6 +180,26 @@ body
 {
     width: 300px;
     height: 400px;
+}
+
+@media (max-width: 1000px)
+{
+    .banner
+    {
+        visibility: hidden;
+        visibility: collapse;
+    }
+
+    .banner2
+    {
+        visibility: visible;
+    }
+
+    .banner-img
+    {
+        width: 70vw;
+        height: auto;
+    }
 }
 
 /* ----------------------------------catalog Page---------------------------------- */

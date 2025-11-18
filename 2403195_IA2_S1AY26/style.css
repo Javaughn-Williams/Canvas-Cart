@@ -1,8 +1,8 @@
 :root
 {
-    --colour-1 : rgb(1, 107, 97);
+    --colour-1 : rgb(1, 106, 96);
     --colour-2 : rgb(112, 178, 178);
-    --colour-3 : rgb(158, 207, 212);
+    --colour-3 : rgb(159, 208, 213);
     --colour-4 : rgb(229, 233, 197);
 
     
@@ -147,7 +147,7 @@ body
 
 .banner2
 {
-    visibility: hidden;
+    display: none;
 }
 
 
@@ -186,13 +186,13 @@ body
 {
     .banner
     {
-        visibility: hidden;
-        visibility: collapse;
+        display: none;
+
     }
 
     .banner2
     {
-        visibility: visible;
+        display: flex;
     }
 
     .banner-img
@@ -455,4 +455,168 @@ body
 
 .about-us-container a:hover {
     color: var(--colour-3);
+}
+
+
+/* ----------------------------------Cart Page---------------------------------- */
+
+.cart-item {
+    background-color: var(--colour-1);
+    padding: 1.5em;
+    border-radius: 20px;
+    margin: 30.5px auto;
+    max-width: 900px;
+}
+
+.cart-body
+{
+    margin-bottom: 100px;
+}
+
+.total {
+    border-color: var(--colour-3);
+    border-width: 4px;
+    border-style: dashed;
+    background-color: var(--colour-1);
+    color: var(--colour-4);
+    padding: 1.5em;
+    border-radius: 20px;
+    max-width: 900px;
+    position: fixed;
+    bottom: 0;              /* stick to bottom */
+    align-self:flex-end; 
+    z-index: 1;
+    margin: 1em;            /* space from edges */
+}
+
+
+/* Layout container */
+.cart-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2em;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Image container */
+.item-display {
+    width: 100%;
+    max-width: 400px;
+}
+
+.item-display img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.product-info
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+}
+
+
+
+/* Make image and info side by side on large screens */
+@media (min-width: 750px) {
+    .cart-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    /* .item-display,
+    .item-data {
+        flex: 1;
+    } */
+}
+
+
+/* ----------------------------------Product Info Styling---------------------------------- */
+
+.product-info {
+    box-sizing: border-box;
+    padding: 1.5em;
+    background-color: var(--colour-2);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--colour-1);
+}
+
+/* Product title */
+.product-info h2 {
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--colour-4);
+    margin-bottom: 0.5em;
+}
+
+/* Section headers */
+.product-info section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3em;
+    color: var(--colour-3);
+}
+
+/* Section text / values */
+.product-info section p {
+    background-color: var(--colour-3);
+    color: var(--colour-1);
+    padding: 0.5em 0.8em;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Price styling */
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--colour-1);
+    text-align: start;
+    background-color: var(--colour-4);
+    border-radius: 10px;
+    padding: 0.5em;
+}
+
+/* Remove button styling */
+.remove-cart {
+    align-self: center;
+    background-color: var(--colour-1);
+    color: var(--colour-4);
+    border: none;
+    border-radius: 10px;
+    padding: 0.8em 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 1em;
+}
+
+.chechout {
+    align-self: center;
+    background-color: var(--colour-1);
+    color: var(--colour-4);
+    border: solid;
+    border-color: rgba(0, 0, 0, 0.114);
+    border-radius: 10px;
+    padding: 0.8em 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.remove-cart:hover, .chechout:hover {
+    background-color: var(--colour-3);
+    color: var(--colour-1);
+    transform: scale(1.05);
 }

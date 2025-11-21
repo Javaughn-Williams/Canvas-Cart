@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="../../style.css" />
   </head>
   <body class="home-body">
+
+    <div class="nav-bar">
+    
+    <div class="logo-container">
+        <img class="logo" src="../../Assets/logo.png" alt="">
+    </div>
+
+    <div class="buttons">
+        <a class="nav-button" href="index.html">Home</a>
+        <a class="nav-button" href="catalog.html">Shop</a>
+        <a class="nav-button" href="about.html">About us</a>
+        <a class="nav-button" href="signin.html">Account</a>
+    </div>
+
+    <a href="cart.html">
+            <div class="logo-container">
+            <img class="logo" src="../../Assets/shopping-cart-icon.svg" alt="CanvasCart Logo">
+        </div>
+        </a>
+        
+    </div>
+
+
     <div class="sign-in-container">
       <div class="sign-in-box">
         <h1>Sign Up</h1>
@@ -14,7 +37,12 @@
 
         <form class="sign-in-form">
           <label for="fullname">Full Name</label>
-          <input type="text" id="fullname" placeholder="Your Name" required />
+          <input
+            type="text"
+            id="fullname"
+            placeholder="Your Name"
+            required
+          />
 
           <label for="email">Email</label>
           <input
@@ -40,7 +68,7 @@
             required
           />
 
-          <button type="submit" class="sign-in-button">Sign Up</button>
+          <button type="submit" class="sign-in-button" id="sign-up-button">Sign Up</button>
         </form>
 
         <p class="extra-links">
@@ -49,5 +77,7 @@
         </p>
       </div>
     </div>
+
+    <script src="../js/signup.js"></script>
   </body>
 </html>
